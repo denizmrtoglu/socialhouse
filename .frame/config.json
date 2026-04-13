@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "name": "socialhouse",
+  "description": "",
+  "createdAt": "2026-04-13T11:02:32.024Z",
+  "initializedBy": "Frame",
+  "settings": {
+    "autoUpdateStructure": true,
+    "autoUpdateNotes": false,
+    "taskRecognition": true
+  },
+  "files": {
+    "agents": "AGENTS.md",
+    "claudeSymlink": "CLAUDE.md",
+    "structure": "STRUCTURE.json",
+    "notes": "PROJECT_NOTES.md",
+    "tasks": "tasks.json",
+    "quickstart": "QUICKSTART.md"
+  }
+}

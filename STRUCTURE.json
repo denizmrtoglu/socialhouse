@@ -1,0 +1,85 @@
+{
+  "_frame_metadata": {
+    "purpose": "Project structure and module map for AI assistants",
+    "forAI": "Read this file FIRST when starting work on this project. It contains the module structure, data flow, and conventions. Update this file when you add new modules or change the architecture.",
+    "lastUpdated": "2026-04-13",
+    "generatedBy": "Frame"
+  },
+  "version": "1.0",
+  "description": "SocialHouse — Ankara merkezli event/nightlife topluluğu uygulaması. Kullanıcılar etkinliklere guest list başvurusu yapar; admin panelden başvurular yönetilir.",
+  "architecture": {
+    "type": "Turborepo monorepo",
+    "entryPoint": "turbo.json",
+    "notes": "3 uygulama: Expo mobile, Next.js 14 admin panel, NestJS API. 2 shared paket: types, utils."
+  },
+  "modules": {
+    "mobile": {
+      "path": "apps/mobile",
+      "purpose": "Expo React Native uygulaması — event listesi, guest list başvurusu, offer talebi, profil yönetimi",
+      "tech": ["Expo", "React Native", "RTK Query", "Redux Toolkit", "Axios", "Clerk"],
+      "depends": ["types", "utils"]
+    },
+    "web": {
+      "path": "apps/web",
+      "purpose": "Next.js 14 admin paneli — event yönetimi, başvuru onaylama/reddetme, offer inbox, kullanıcı listesi",
+      "tech": ["Next.js 14 App Router", "Tailwind CSS", "Clerk"],
+      "depends": ["types", "utils"]
+    },
+    "api": {
+      "path": "apps/api",
+      "purpose": "NestJS backend — REST API, Clerk webhook, BullMQ queue, S3 presigned URL, Expo push notifications",
+      "tech": ["NestJS", "Prisma", "PostgreSQL", "BullMQ", "Redis", "AWS S3", "Clerk"],
+      "depends": ["types"],
+      "subModules": {
+        "auth": "Clerk JWT guard, AdminGuard",
+        "users": "Kullanıcı profil CRUD + push token endpoint",
+        "events": "Event CRUD (public okuma, admin yazma)",
+        "applications": "Guest list başvurusu, toplu onay/red, Excel export",
+        "offers": "Bistro/Backstage teklif CRUD + admin not",
+        "notifications": "Expo push notification servisi",
+        "queue": "BullMQ — notifications + auto-approve queue'ları",
+        "storage": "AWS S3 presigned URL servisi",
+        "webhooks": "Clerk user.created / user.updated / user.deleted handler",
+        "prisma": "Prisma service"
+      }
+    },
+    "types": {
+      "path": "packages/types",
+      "purpose": "Tüm uygulamalar arasında paylaşılan TypeScript tipleri",
+      "depends": []
+    },
+    "utils": {
+      "path": "packages/utils",
+      "purpose": "Paylaşılan utility fonksiyonları",
+      "depends": ["types"]
+    }
+  },
+  "dataFlow": [
+    "Clerk auth → user.created webhook → NestJS /webhooks/clerk → Prisma User kaydı",
+    "Mobile client → POST /applications → NestJS Applications module → Prisma → BullMQ notification job",
+    "BullMQ worker → Expo Push API → Kullanıcı push bildirimi",
+    "Admin panel → PATCH /admin/applications/:id → status güncelle → push notification queue",
+    "Mobile client → POST /storage/presigned-url → S3 presigned URL → direkt S3 upload → URL'i PATCH /users/me ile kaydet"
+  ],
+  "database": {
+    "provider": "PostgreSQL via Supabase",
+    "orm": "Prisma",
+    "models": ["User", "Event", "Application", "Offer"],
+    "enums": ["Gender", "ApplicationStatus", "OfferType", "OfferStatus"]
+  },
+  "conventions": {
+    "language": "TypeScript — tüm paketler",
+    "dates": "UTC olarak sakla, mobile'da locale'e göre göster",
+    "instagram": "@'sız sakla, link oluştururken ekle",
+    "ids": "cuid() formatı",
+    "adminAuth": "Clerk privateMetadata.role === 'admin' kontrolü",
+    "pushToken": "Her app launch'ta güncelle, null ise bildirimi sessizce skip et"
+  },
+  "architectureNotes": {
+    "guestListFlow": "Başvuru için gender + birthDate + occupation zorunlu; eksikse 'Profilini Tamamla' yönlendirmesi",
+    "autoApprove": "autoApproveAll veya autoApproveFemale event ayarları — başvuru anında BullMQ üzerinden işlenir",
+    "offerFlow": "Fiyat iletimi uygulama dışında (telefon/Instagram); uygulama talep toplama + statü takibi",
+    "s3Upload": "Presigned PUT URL ile direkt S3 upload — backend dosyaya dokunmaz",
+    "softDelete": "user.deleted webhook'ta soft-delete önerilir (deletedAt alanı); Application/Offer kayıtları korunur"
+  }
+}
