@@ -4,6 +4,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { WebhooksModule } from './webhooks/webhooks.module';
 import { StorageModule } from './storage/storage.module';
 import { EventsModule } from './events/events.module';
+import { HealthController } from './health/health.controller';
 
 @Module({
   imports: [
@@ -16,5 +17,6 @@ import { EventsModule } from './events/events.module';
     StorageModule,
     EventsModule,
   ],
+  controllers: [HealthController],
 })
 export class AppModule {}
