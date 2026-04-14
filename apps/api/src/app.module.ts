@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './prisma/prisma.module';
 import { WebhooksModule } from './webhooks/webhooks.module';
+import { StorageModule } from './storage/storage.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { WebhooksModule } from './webhooks/webhooks.module';
     }),
     PrismaModule,
     WebhooksModule,
+    StorageModule,
   ],
 })
 export class AppModule {}
