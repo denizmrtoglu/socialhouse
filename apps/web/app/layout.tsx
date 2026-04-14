@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from 'sonner'
 import './globals.css'
 
@@ -24,11 +25,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="antialiased">
-        {children}
-        <Toaster position="top-right" richColors />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="tr" className={`${geistSans.variable} ${geistMono.variable}`}>
+        <body className="antialiased">
+          {children}
+          <Toaster position="top-right" richColors />
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

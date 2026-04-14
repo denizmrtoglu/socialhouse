@@ -9,6 +9,8 @@ import {
   Gift,
   LayoutDashboard,
 } from 'lucide-react'
+import { useClerk } from '@clerk/nextjs'
+import { LogOut } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -21,6 +23,7 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname()
+  const { signOut } = useClerk()
 
   return (
     <aside className="flex h-screen w-60 flex-col bg-[var(--sidebar-bg)] text-[var(--sidebar-text)]">
@@ -60,8 +63,15 @@ export function Sidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="border-t border-white/10 px-4 py-4">
-        <p className="text-xs text-white/30">socialhouse © 2025</p>
+      <div className="border-t border-white/10 px-4 py-4 space-y-3">
+        <button
+          onClick={() => signOut({ redirectUrl: '/login' })}
+          className="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-white/60 hover:bg-white/8 hover:text-white/90 transition-colors"
+        >
+          <LogOut className="h-4 w-4 shrink-0" />
+          Çıkış Yap
+        </button>
+        <p className="text-xs text-white/30 px-3">socialhouse © 2025</p>
       </div>
     </aside>
   )
