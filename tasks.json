@@ -7,37 +7,9 @@
   },
   "project": "socialhouse",
   "version": "1.1",
-  "lastUpdated": "2026-04-14T09:00:00.000Z",
+  "lastUpdated": "2026-04-14T10:00:00.000Z",
   "tasks": {
     "pending": [
-      {
-        "id": "task-005",
-        "title": "NestJS — Applications iş mantığı + BullMQ",
-        "description": "ApplicationsModule: POST /applications (başvuru yap — profil tamamlanmış olmalı: gender+birthDate+occupation), GET /applications/me. Admin: GET /admin/applications, PATCH /admin/applications/:id, POST /admin/applications/bulk, GET /admin/applications/export/:eventId (exceljs). BullMQ notifications queue: onay/red sonrası push job ekle. autoApproveAll/autoApproveFemale BullMQ auto-approve queue.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Başvuru iş kuralları çalışır (tekrar başvuru yok, limit kontrolü, profil kontrolü), Excel export çalışır, BullMQ job'lar kuyruğa eklenir",
-        "status": "pending",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 5",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
-      {
-        "id": "task-006",
-        "title": "NestJS — Offers CRUD",
-        "description": "OffersModule: POST /offers (Bistro/Backstage teklif talebi), GET /offers/me. Admin: GET /admin/offers, PATCH /admin/offers/:id (statü güncelle + adminNote). Offer statü akışı: PENDING → IN_PROGRESS → COMMUNICATED.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Kullanıcı offer gönderebilir, admin statü + not güncelleyebilir",
-        "status": "pending",
-        "priority": "medium",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 6",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
       {
         "id": "task-007",
         "title": "NestJS — Push notification servisi + push token endpoint",
@@ -228,7 +200,7 @@
   },
   "metadata": {
     "totalCreated": 17,
-    "totalCompleted": 4
+    "totalCompleted": 6
   },
   "categories": {
     "feature": "New features",
