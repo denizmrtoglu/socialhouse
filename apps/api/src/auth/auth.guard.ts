@@ -31,7 +31,8 @@ export class AuthGuard implements CanActivate {
         role: (payload.metadata as any)?.role ?? null,
       } satisfies ClerkAuthUser;
       return true;
-    } catch {
+    } catch (err) {
+      console.error('[AuthGuard] verifyToken failed:', err);
       throw new UnauthorizedException('Invalid or expired token');
     }
   }
