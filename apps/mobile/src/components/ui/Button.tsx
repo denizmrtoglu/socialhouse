@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActivityIndicator, StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { ActivityIndicator, StyleProp, StyleSheet, TextStyle, ViewStyle } from 'react-native'
 import { theme, spacing, radius, fontSize, fontWeight } from '../../tokens'
 import { Pressable } from '../primitives/Pressable'
 import { Text } from '../primitives/Text'
@@ -15,7 +15,7 @@ interface ButtonProps {
   disabled?: boolean
   loading?: boolean
   fullWidth?: boolean
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
 }
 
 const containerStyles: Record<Variant, ViewStyle> = {

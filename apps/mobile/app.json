@@ -2,6 +2,7 @@
   "expo": {
     "name": "SocialHouse",
     "slug": "socialhouse",
+    "scheme": "socialhouse",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -31,6 +32,12 @@
         "projectId": "bbdf3ad6-66b4-43d0-9a50-f8c8f1e550b4"
       }
     },
-    "owner": "denizmrtoglu"
+    "owner": "denizmrtoglu",
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-build-properties"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { StyleSheet, ViewStyle } from 'react-native'
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native'
 import { theme, radius, spacing, shadows } from '../../tokens'
 import { Pressable } from '../primitives/Pressable'
 import { View } from '../primitives/View'
@@ -11,7 +11,7 @@ interface CardProps {
   onPress?: () => void
   surface?: CardSurface
   padding?: number
-  style?: ViewStyle
+  style?: StyleProp<ViewStyle>
   /** Kenarlık göster */
   bordered?: boolean
 }
