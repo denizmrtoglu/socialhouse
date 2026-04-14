@@ -26,9 +26,10 @@ export class AuthGuard implements CanActivate {
       const payload = await verifyToken(token, {
         secretKey: process.env.CLERK_SECRET_KEY,
       });
+      const p = payload as any;
       (request as any).auth = {
         clerkId: payload.sub,
-        role: (payload.metadata as any)?.role ?? null,
+        role: p?.publicMetadata?.role ?? p?.metadata?.role ?? null,
       } satisfies ClerkAuthUser;
       return true;
     } catch (err) {
