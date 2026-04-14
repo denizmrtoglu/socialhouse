@@ -7,23 +7,9 @@
   },
   "project": "socialhouse",
   "version": "1.1",
-  "lastUpdated": "2026-04-14T00:00:00.000Z",
+  "lastUpdated": "2026-04-14T08:30:00.000Z",
   "tasks": {
     "pending": [
-      {
-        "id": "task-003",
-        "title": "NestJS — AWS S3 presigned URL servisi",
-        "description": "StorageModule oluştur. POST /storage/presigned-url endpoint'i: type ('profile' | 'event-cover') ve dosya uzantısı alır, S3 presigned PUT URL döner (5 dk geçerli). S3 key pattern: users/{userId}/profile.{ext} ve events/{eventId}/cover.{ext}.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Endpoint presigned URL döner, client bu URL ile direkt S3'e upload yapabilir",
-        "status": "pending",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 3",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
       {
         "id": "task-004",
         "title": "NestJS — Events CRUD",
@@ -222,36 +208,7 @@
       }
     ],
     "inProgress": [],
-    "completed": [
-      {
-        "id": "task-001",
-        "title": "Turborepo scaffold + shared types paketi",
-        "description": "Turborepo monorepo yapısını kur. apps/mobile, apps/web, apps/api, packages/types, packages/utils klasörlerini oluştur. turbo.json, kök package.json, tsconfig.base.json ayarla. packages/types'a temel shared type'ları ekle.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "pnpm install çalışır, pnpm build tüm paketleri derler, shared types import edilebilir",
-        "status": "completed",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 1",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T13:03:44.762Z",
-        "completedAt": "2026-04-13T13:03:44.763Z"
-      },
-      {
-        "id": "task-002",
-        "title": "NestJS — Prisma setup + Clerk webhook handler",
-        "description": "apps/api altında NestJS projesini kur. Prisma schema'yı spec'e göre yaz (User, Event, Application, Offer modelleri + enum'lar). Supabase PostgreSQL bağlantısı. Clerk webhook handler'ı ekle: user.created → Prisma User oluştur, user.updated → güncelle, user.deleted → soft-delete (deletedAt). Svix ile webhook verify.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "prisma migrate dev çalışır, /webhooks/clerk endpoint Clerk event'lerini işler ve Prisma'ya yazar",
-        "status": "completed",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 2",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-14T00:00:00.000Z",
-        "completedAt": "2026-04-14T00:00:00.000Z"
-      }
-    ]
+    "completed": []
   },
   "taskSchema": {
     "_comment": "This schema shows the expected structure for each task",
@@ -271,7 +228,7 @@
   },
   "metadata": {
     "totalCreated": 17,
-    "totalCompleted": 2
+    "totalCompleted": 3
   },
   "categories": {
     "feature": "New features",

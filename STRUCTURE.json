@@ -2,7 +2,7 @@
   "_frame_metadata": {
     "purpose": "Project structure and module map for AI assistants",
     "forAI": "Read this file FIRST when starting work on this project. It contains the module structure, data flow, and conventions. Update this file when you add new modules or change the architecture.",
-    "lastUpdated": "2026-04-13",
+    "lastUpdated": "2026-04-14",
     "generatedBy": "Frame"
   },
   "version": "1.0",
@@ -31,16 +31,16 @@
       "tech": ["NestJS", "Prisma", "PostgreSQL", "BullMQ", "Redis", "AWS S3", "Clerk"],
       "depends": ["types"],
       "subModules": {
-        "auth": "Clerk JWT guard, AdminGuard",
+        "auth": "✅ AuthGuard (Clerk JWT verifyToken) + AdminGuard (role=admin) + @GetAuth() decorator",
+        "storage": "✅ POST /api/storage/presigned-url — S3 presigned PUT URL (5dk), AuthGuard korumalı",
+        "webhooks": "✅ POST /api/webhooks/clerk — user.created/updated/deleted, Svix verify, soft-delete",
+        "prisma": "✅ PrismaService (global module)",
         "users": "Kullanıcı profil CRUD + push token endpoint",
         "events": "Event CRUD (public okuma, admin yazma)",
         "applications": "Guest list başvurusu, toplu onay/red, Excel export",
         "offers": "Bistro/Backstage teklif CRUD + admin not",
         "notifications": "Expo push notification servisi",
-        "queue": "BullMQ — notifications + auto-approve queue'ları",
-        "storage": "AWS S3 presigned URL servisi",
-        "webhooks": "Clerk user.created / user.updated / user.deleted handler",
-        "prisma": "Prisma service"
+        "queue": "BullMQ — notifications + auto-approve queue'ları"
       }
     },
     "types": {
