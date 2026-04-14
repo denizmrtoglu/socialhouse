@@ -1,4 +1,4 @@
-import { clerkClient, clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 
 const isPublicRoute = createRouteMatcher(['/login(.*)'])
@@ -6,7 +6,7 @@ const isPublicRoute = createRouteMatcher(['/login(.*)'])
 export default clerkMiddleware(async (auth, req) => {
   if (isPublicRoute(req)) return NextResponse.next()
 
-  const { userId } = await auth()
+  const { userId, sessionClaims } = await auth()
 
   // Giriş yapılmamışsa login'e yönlendir
   if (!userId) {
@@ -14,10 +14,8 @@ export default clerkMiddleware(async (auth, req) => {
     return NextResponse.redirect(loginUrl)
   }
 
-  // privateMetadata'dan role kontrolü (server-side)
-  const client = await clerkClient()
-  const user = await client.users.getUser(userId)
-  const role = (user.privateMetadata as { role?: string })?.role
+  // publicMetadata JWT claim'inden role oku — API call yok, hızlı
+  const role = (sessionClaims?.publicMetadata as { role?: string } | undefined)?.role
 
   if (role !== 'admin') {
     const loginUrl = new URL('/login', req.url)
