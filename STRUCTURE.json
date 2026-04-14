@@ -40,8 +40,8 @@
         "applications": "✅ POST/GET /applications + admin CRUD, bulk, Excel export, BullMQ notifications queue",
         "offers": "✅ POST/GET /offers + admin CRUD (statü + adminNote)",
         "queue": "✅ QueueModule — BullMQ global setup, 'notifications' queue (Redis)",
-        "notifications": "Expo push notification servisi + BullMQ worker",
-        "users": "Kullanıcı profil CRUD + push token endpoint"
+        "notifications": "✅ BullMQ processor — expo-server-sdk ile push gönderme, retry desteği",
+        "users": "✅ GET/PATCH /users/me, PATCH /users/me/push-token, GET /admin/users"
       }
     },
     "types": {
