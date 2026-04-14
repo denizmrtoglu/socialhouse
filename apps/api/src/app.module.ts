@@ -4,6 +4,8 @@ import { PrismaModule } from './prisma/prisma.module';
 import { WebhooksModule } from './webhooks/webhooks.module';
 import { StorageModule } from './storage/storage.module';
 import { EventsModule } from './events/events.module';
+import { QueueModule } from './queue/queue.module';
+import { ApplicationsModule } from './applications/applications.module';
 import { HealthController } from './health/health.controller';
 
 @Module({
@@ -13,9 +15,11 @@ import { HealthController } from './health/health.controller';
       envFilePath: '.env',
     }),
     PrismaModule,
+    QueueModule,
     WebhooksModule,
     StorageModule,
     EventsModule,
+    ApplicationsModule,
   ],
   controllers: [HealthController],
 })
