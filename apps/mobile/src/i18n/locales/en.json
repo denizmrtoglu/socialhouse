@@ -1,0 +1,80 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "next": "Continue",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "empty": "No content yet",
+    "seeAll": "See all",
+    "required": "This field is required"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "welcome": "Welcome",
+    "continueWithApple": "Continue with Apple",
+    "continueWithGoogle": "Continue with Google"
+  },
+  "events": {
+    "title": "Events",
+    "upcoming": "Upcoming Events",
+    "past": "Past Events",
+    "noEvents": "No active events found",
+    "guestLimit": "{{count}} guest limit",
+    "apply": "Apply",
+    "applied": "Applied",
+    "full": "Full",
+    "details": "Event Details"
+  },
+  "applications": {
+    "title": "My Applications",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "noApplications": "You have no applications yet",
+    "appliedOn": "Applied on {{date}}"
+  },
+  "offers": {
+    "title": "Offers",
+    "bistro": "Bistro",
+    "backstage": "Backstage",
+    "status": {
+      "pending": "Pending",
+      "inProgress": "In Progress",
+      "communicated": "Communicated"
+    },
+    "note": "Your note",
+    "notePlaceholder": "Write your request or note..."
+  },
+  "profile": {
+    "title": "Profile",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "instagram": "Instagram",
+    "occupation": "Occupation",
+    "birthDate": "Date of Birth",
+    "gender": {
+      "label": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    },
+    "editPhoto": "Edit Photo",
+    "saveChanges": "Save Changes"
+  },
+  "errors": {
+    "generic": "An unexpected error occurred. Please try again.",
+    "network": "Connection error. Check your internet connection.",
+    "notFound": "Content not found.",
+    "unauthorized": "You are not authorized for this action."
+  }
+}

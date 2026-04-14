@@ -1,0 +1,80 @@
+{
+  "common": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "confirm": "Onayla",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "Devam",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar dene",
+    "empty": "Henüz içerik yok",
+    "seeAll": "Tümünü gör",
+    "required": "Bu alan zorunludur"
+  },
+  "auth": {
+    "signIn": "Giriş Yap",
+    "signOut": "Çıkış Yap",
+    "welcome": "Hoş geldin",
+    "continueWithApple": "Apple ile devam et",
+    "continueWithGoogle": "Google ile devam et"
+  },
+  "events": {
+    "title": "Etkinlikler",
+    "upcoming": "Yaklaşan Etkinlikler",
+    "past": "Geçmiş Etkinlikler",
+    "noEvents": "Aktif etkinlik bulunamadı",
+    "guestLimit": "{{count}} kişilik kontenjan",
+    "apply": "Başvur",
+    "applied": "Başvuruldu",
+    "full": "Kontenjan Dolu",
+    "details": "Etkinlik Detayı"
+  },
+  "applications": {
+    "title": "Başvurularım",
+    "status": {
+      "pending": "Beklemede",
+      "approved": "Onaylandı",
+      "rejected": "Reddedildi"
+    },
+    "noApplications": "Henüz başvurun bulunmuyor",
+    "appliedOn": "{{date}} tarihinde başvuruldu"
+  },
+  "offers": {
+    "title": "Teklifler",
+    "bistro": "Bistro",
+    "backstage": "Backstage",
+    "status": {
+      "pending": "Beklemede",
+      "inProgress": "İşlemde",
+      "communicated": "İletildi"
+    },
+    "note": "Notunuz",
+    "notePlaceholder": "Talep veya notunuzu yazın..."
+  },
+  "profile": {
+    "title": "Profil",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "instagram": "Instagram",
+    "occupation": "Meslek",
+    "birthDate": "Doğum Tarihi",
+    "gender": {
+      "label": "Cinsiyet",
+      "male": "Erkek",
+      "female": "Kadın",
+      "other": "Diğer"
+    },
+    "editPhoto": "Fotoğrafı Düzenle",
+    "saveChanges": "Değişiklikleri Kaydet"
+  },
+  "errors": {
+    "generic": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+    "network": "Bağlantı hatası. İnternet bağlantınızı kontrol edin.",
+    "notFound": "İçerik bulunamadı.",
+    "unauthorized": "Bu işlem için yetkiniz bulunmuyor."
+  }
+}

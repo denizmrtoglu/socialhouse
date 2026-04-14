@@ -53,6 +53,24 @@
       "path": "packages/utils",
       "purpose": "Paylaşılan utility fonksiyonları",
       "depends": ["types"]
+    },
+    "tokens": {
+      "path": "packages/tokens",
+      "purpose": "Platform-agnostic design token'ları — colors, semantic, typography, spacing, radius, shadows",
+      "depends": [],
+      "notes": "Mobile ve web tarafından consume edilir. Accent/primary rengi ve font family TBD — sadece DEFAULT değerleri güncelle."
+    },
+    "webUIKit": {
+      "path": "apps/web/components",
+      "purpose": "Admin panel UI bileşenleri — /ui (shadcn tabanlı) + /admin (layout, stat-card, vb.)",
+      "tech": ["Tailwind CSS v4", "shadcn/ui (manual)", "Radix UI", "Lucide", "sonner"],
+      "notes": "Light mode sabit, Türkçe hardcoded. Renk değişimi için globals.css @theme ve :root değişkenlerini güncelle."
+    },
+    "mobileUIKit": {
+      "path": "apps/mobile/src/components",
+      "purpose": "Mobile UI bileşenleri — /primitives (Text, View, Pressable, Divider, Spacer) + /ui (Button, Input, Card, Badge, Avatar) + /layout (Screen)",
+      "tech": ["React Native StyleSheet", "react-native-reanimated", "react-native-safe-area-context", "lucide-react-native"],
+      "notes": "Dark mode sabit, token tabanlı. Animasyonlu Pressable ile luxury algısı. i18n: i18next + expo-localization (TR/EN)."
     }
   },
   "dataFlow": [
