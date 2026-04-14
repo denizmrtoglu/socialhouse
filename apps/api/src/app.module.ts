@@ -6,6 +6,7 @@ import { StorageModule } from './storage/storage.module';
 import { EventsModule } from './events/events.module';
 import { QueueModule } from './queue/queue.module';
 import { ApplicationsModule } from './applications/applications.module';
+import { OffersModule } from './offers/offers.module';
 import { HealthController } from './health/health.controller';
 
 @Module({
@@ -20,6 +21,7 @@ import { HealthController } from './health/health.controller';
     StorageModule,
     EventsModule,
     ApplicationsModule,
+    OffersModule,
   ],
   controllers: [HealthController],
 })
