@@ -27,7 +27,8 @@
       "subModules": {
         "middleware": "✅ proxy.ts (middleware.ts) — clerkClient().users.getUser ile privateMetadata.role=admin kontrolü",
         "events": "✅ /events CRUD, /events/new, /events/[id]/edit — S3 presigned upload, EventForm client component",
-        "dashboard": "✅ /dashboard — gerçek istatistikler (users, events, pending applications)"
+        "dashboard": "✅ /dashboard — gerçek istatistikler (users, events, pending applications)",
+        "applications": "✅ /applications — event filtreli tablo, tekil/toplu onay-red, Excel export"
       }
     },
     "api": {
