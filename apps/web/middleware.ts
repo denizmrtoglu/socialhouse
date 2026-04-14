@@ -1,7 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 
-const isPublicRoute = createRouteMatcher(['/login(.*)', '/api/debug-claims'])
+const isPublicRoute = createRouteMatcher(['/login(.*)'])
 
 export default clerkMiddleware(async (auth, req) => {
   if (isPublicRoute(req)) return NextResponse.next()
@@ -14,11 +14,7 @@ export default clerkMiddleware(async (auth, req) => {
     return NextResponse.redirect(loginUrl)
   }
 
-  // JWT claim'den role oku — API guard ile aynı pattern (payload.metadata.role)
-  const claims = sessionClaims as Record<string, unknown> | null
-  const role =
-    (claims?.publicMetadata as { role?: string } | undefined)?.role ??
-    (claims?.metadata as { role?: string } | undefined)?.role
+  const role = (sessionClaims?.publicMetadata as { role?: string } | undefined)?.role
 
   if (role !== 'admin') {
     const loginUrl = new URL('/login', req.url)
