@@ -2,7 +2,7 @@
   "_frame_metadata": {
     "purpose": "Project structure and module map for AI assistants",
     "forAI": "Read this file FIRST when starting work on this project. It contains the module structure, data flow, and conventions. Update this file when you add new modules or change the architecture.",
-    "lastUpdated": "2026-04-14",
+    "lastUpdated": "2026-04-14T09:00:00.000Z",
     "generatedBy": "Frame"
   },
   "version": "1.0",
@@ -36,7 +36,7 @@
         "webhooks": "✅ POST /api/webhooks/clerk — user.created/updated/deleted, Svix verify, soft-delete",
         "prisma": "✅ PrismaService (global module)",
         "users": "Kullanıcı profil CRUD + push token endpoint",
-        "events": "Event CRUD (public okuma, admin yazma)",
+        "events": "✅ GET /events, GET /events/:id (public) | POST/PATCH/DELETE /admin/events (AdminGuard)",
         "applications": "Guest list başvurusu, toplu onay/red, Excel export",
         "offers": "Bistro/Backstage teklif CRUD + admin not",
         "notifications": "Expo push notification servisi",

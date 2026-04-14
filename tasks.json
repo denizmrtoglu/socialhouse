@@ -7,23 +7,9 @@
   },
   "project": "socialhouse",
   "version": "1.1",
-  "lastUpdated": "2026-04-14T08:30:00.000Z",
+  "lastUpdated": "2026-04-14T09:00:00.000Z",
   "tasks": {
     "pending": [
-      {
-        "id": "task-004",
-        "title": "NestJS — Events CRUD",
-        "description": "EventsModule oluştur. Public: GET /events (aktif eventler), GET /events/:id. Admin: POST /admin/events, PATCH /admin/events/:id, DELETE /admin/events/:id. AdminGuard ile koru (Clerk JWT + privateMetadata.role === 'admin').",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Admin CRUD çalışır, public endpoint'ler auth gerektirmez, admin endpoint'ler AdminGuard ile korunur",
-        "status": "pending",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 4",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
       {
         "id": "task-005",
         "title": "NestJS — Applications iş mantığı + BullMQ",
@@ -205,6 +191,20 @@
         "createdAt": "2026-04-13T00:00:00.000Z",
         "updatedAt": "2026-04-13T00:00:00.000Z",
         "completedAt": null
+      },
+      {
+        "id": "task-018",
+        "title": "NestJS — Swagger / OpenAPI entegrasyonu",
+        "description": "@nestjs/swagger kurulumu. Tüm controller ve DTO'lara decorator ekle. /api/docs adresinden interaktif test arayüzü. Bearer token auth desteği.",
+        "userRequest": "swagger ekleyelim mvp bitince",
+        "acceptanceCriteria": "/api/docs açılır, tüm endpoint'ler görünür, token ile test edilebilir",
+        "status": "pending",
+        "priority": "low",
+        "category": "docs",
+        "context": "2026-04-14 — MVP sonrası yapılacak",
+        "createdAt": "2026-04-14T09:00:00.000Z",
+        "updatedAt": "2026-04-14T09:00:00.000Z",
+        "completedAt": null
       }
     ],
     "inProgress": [],
@@ -228,7 +228,7 @@
   },
   "metadata": {
     "totalCreated": 17,
-    "totalCompleted": 3
+    "totalCompleted": 4
   },
   "categories": {
     "feature": "New features",
