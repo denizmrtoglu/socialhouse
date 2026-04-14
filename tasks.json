@@ -7,23 +7,9 @@
   },
   "project": "socialhouse",
   "version": "1.1",
-  "lastUpdated": "2026-04-14T13:00:00.000Z",
+  "lastUpdated": "2026-04-14T13:30:00.000Z",
   "tasks": {
     "pending": [
-      {
-        "id": "task-011",
-        "title": "Next.js admin panel — Teklif inbox'ı",
-        "description": "/offers sayfası: her teklif kartında kullanıcı adı, instagram, event, tür (Bistro/Backstage), kullanıcı notu, tarih. Statü güncelleme: PENDING → IN_PROGRESS → COMMUNICATED. Serbest adminNote alanı.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Offer statüsü güncellenebilir, admin not kaydedilebilir",
-        "status": "pending",
-        "priority": "medium",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 11",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
       {
         "id": "task-012",
         "title": "Expo — Auth flow (Clerk)",
@@ -144,7 +130,7 @@
   },
   "metadata": {
     "totalCreated": 17,
-    "totalCompleted": 10
+    "totalCompleted": 11
   },
   "categories": {
     "feature": "New features",

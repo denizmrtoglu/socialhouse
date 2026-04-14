@@ -28,7 +28,8 @@
         "middleware": "✅ proxy.ts (middleware.ts) — clerkClient().users.getUser ile privateMetadata.role=admin kontrolü",
         "events": "✅ /events CRUD, /events/new, /events/[id]/edit — S3 presigned upload, EventForm client component",
         "dashboard": "✅ /dashboard — gerçek istatistikler (users, events, pending applications)",
-        "applications": "✅ /applications — event filtreli tablo, tekil/toplu onay-red, Excel export"
+        "applications": "✅ /applications — event filtreli tablo, tekil/toplu onay-red, Excel export",
+        "offers": "✅ /offers — kart inbox, statü akışı (PENDING→IN_PROGRESS→COMMUNICATED), adminNote inline edit"
       }
     },
     "api": {
