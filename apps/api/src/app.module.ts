@@ -7,6 +7,8 @@ import { EventsModule } from './events/events.module';
 import { QueueModule } from './queue/queue.module';
 import { ApplicationsModule } from './applications/applications.module';
 import { OffersModule } from './offers/offers.module';
+import { NotificationsModule } from './notifications/notifications.module';
+import { UsersModule } from './users/users.module';
 import { HealthController } from './health/health.controller';
 
 @Module({
@@ -22,6 +24,8 @@ import { HealthController } from './health/health.controller';
     EventsModule,
     ApplicationsModule,
     OffersModule,
+    NotificationsModule,
+    UsersModule,
   ],
   controllers: [HealthController],
 })
