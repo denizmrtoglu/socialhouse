@@ -7,37 +7,9 @@
   },
   "project": "socialhouse",
   "version": "1.1",
-  "lastUpdated": "2026-04-14T11:00:00.000Z",
+  "lastUpdated": "2026-04-14T12:00:00.000Z",
   "tasks": {
     "pending": [
-      {
-        "id": "task-008",
-        "title": "Next.js admin panel — Auth middleware",
-        "description": "apps/web Next.js 14 projesini kur. Clerk entegrasyonu. middleware.ts: tüm route'lar için privateMetadata.role === 'admin' kontrolü, değilse redirectToSignIn. /login Clerk SignIn sayfası.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Admin olmayan kullanıcılar login'e redirect edilir, admin kullanıcılar panele erişebilir",
-        "status": "pending",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 8",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
-      {
-        "id": "task-009",
-        "title": "Next.js admin panel — Event yönetimi",
-        "description": "/events listesi, /events/new form (kapak görseli S3 upload, başlık, açıklama, tarih/saat, mekan, ticketUrl opsiyonel, guest limit, autoApproveAll/autoApproveFemale checkbox), /events/[id]/edit. Dashboard: toplam kullanıcı, aktif event, bekleyen başvuru sayıları, son 10 başvuru.",
-        "userRequest": "spec md dosyası ekledim buraya. frame ile geliştirme yapacağım.",
-        "acceptanceCriteria": "Event CRUD çalışır, kapak görseli S3'e yüklenir, dashboard istatistikler gösterilir",
-        "status": "pending",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-13 — spec'ten türetildi, geliştirme adım 9",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-13T00:00:00.000Z",
-        "completedAt": null
-      },
       {
         "id": "task-010",
         "title": "Next.js admin panel — Başvuru yönetimi + Excel export",
@@ -186,7 +158,7 @@
   },
   "metadata": {
     "totalCreated": 17,
-    "totalCompleted": 7
+    "totalCompleted": 9
   },
   "categories": {
     "feature": "New features",

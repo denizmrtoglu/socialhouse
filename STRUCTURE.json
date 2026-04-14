@@ -21,9 +21,14 @@
     },
     "web": {
       "path": "apps/web",
-      "purpose": "Next.js 14 admin paneli — event yönetimi, başvuru onaylama/reddetme, offer inbox, kullanıcı listesi",
-      "tech": ["Next.js 14 App Router", "Tailwind CSS", "Clerk"],
-      "depends": ["types", "utils"]
+      "purpose": "Next.js 16 admin paneli — event yönetimi, başvuru onaylama/reddetme, offer inbox, kullanıcı listesi",
+      "tech": ["Next.js 16 App Router", "Tailwind CSS 4", "Clerk"],
+      "depends": ["types", "utils"],
+      "subModules": {
+        "middleware": "✅ proxy.ts (middleware.ts) — clerkClient().users.getUser ile privateMetadata.role=admin kontrolü",
+        "events": "✅ /events CRUD, /events/new, /events/[id]/edit — S3 presigned upload, EventForm client component",
+        "dashboard": "✅ /dashboard — gerçek istatistikler (users, events, pending applications)"
+      }
     },
     "api": {
       "path": "apps/api",
