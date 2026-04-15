@@ -35,6 +35,7 @@
     "owner": "denizmrtoglu",
     "plugins": [
       "expo-router",
+      "expo-dev-client",
       "expo-secure-store",
       "expo-web-browser",
       "expo-build-properties"
