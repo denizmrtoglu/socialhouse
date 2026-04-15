@@ -13,7 +13,11 @@ export default function RootLayout() {
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <ClerkLoaded>
         <StatusBar style="light" backgroundColor={theme.background.canvas} />
-        <Stack screenOptions={{ headerShown: false }} />
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(app)" />
+          <Stack.Screen name="(auth)" />
+          <Stack.Screen name="event/[id]" options={{ presentation: 'card' }} />
+        </Stack>
       </ClerkLoaded>
     </ClerkProvider>
   )
