@@ -40,68 +40,7 @@
       }
     ],
     "inProgress": [],
-    "completed": [
-      {
-        "id": "task-012",
-        "title": "Expo — Auth flow (Clerk)",
-        "description": "Expo Router kurulumu, ClerkProvider + SecureStore token cache, login ve signup ekranları (email doğrulama adımıyla), korumalı (app) tab layout.",
-        "status": "completed",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-14",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-15T00:00:00.000Z",
-        "completedAt": "2026-04-15T00:00:00.000Z"
-      },
-      {
-        "id": "task-013",
-        "title": "Expo — Event list + detay ekranları",
-        "description": "EventsScreen FlatList (kapak görseli, tarih, mekan), event/[id] detay ekranı, başvuru butonu, axios API client.",
-        "status": "completed",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-15",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-15T00:00:00.000Z",
-        "completedAt": "2026-04-15T00:00:00.000Z"
-      },
-      {
-        "id": "task-014",
-        "title": "Expo — Başvuru akışı + push token kayıt",
-        "description": "ApplicationsScreen durum badge'leriyle, usePushToken hook (expo-notifications), (app) layout'a entegre.",
-        "status": "completed",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-15",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-15T00:00:00.000Z",
-        "completedAt": "2026-04-15T00:00:00.000Z"
-      },
-      {
-        "id": "task-015",
-        "title": "Expo — Offer talebi + takip ekranı",
-        "description": "OffersScreen: teklif listesi, Teklif Gönder modal (event picker, tür chip, not), admin notu gösterimi.",
-        "status": "completed",
-        "priority": "medium",
-        "category": "feature",
-        "context": "2026-04-15",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-15T00:00:00.000Z",
-        "completedAt": "2026-04-15T00:00:00.000Z"
-      },
-      {
-        "id": "task-016",
-        "title": "Expo — Profil + onboarding tamamlama",
-        "description": "ProfileScreen: bilgi kartı, gender/meslek/doğum tarihi düzenleme, onboarding eksik banner, çıkış yap.",
-        "status": "completed",
-        "priority": "high",
-        "category": "feature",
-        "context": "2026-04-15",
-        "createdAt": "2026-04-13T00:00:00.000Z",
-        "updatedAt": "2026-04-15T00:00:00.000Z",
-        "completedAt": "2026-04-15T00:00:00.000Z"
-      }
-    ]
+    "completed": []
   },
   "taskSchema": {
     "_comment": "This schema shows the expected structure for each task",

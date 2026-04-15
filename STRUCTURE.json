@@ -2,7 +2,7 @@
   "_frame_metadata": {
     "purpose": "Project structure and module map for AI assistants",
     "forAI": "Read this file FIRST when starting work on this project. It contains the module structure, data flow, and conventions. Update this file when you add new modules or change the architecture.",
-    "lastUpdated": "2026-04-14T10:00:00.000Z",
+    "lastUpdated": "2026-04-15T00:00:00.000Z",
     "generatedBy": "Frame"
   },
   "version": "1.0",
@@ -16,8 +16,17 @@
     "mobile": {
       "path": "apps/mobile",
       "purpose": "Expo React Native uygulaması — event listesi, guest list başvurusu, offer talebi, profil yönetimi",
-      "tech": ["Expo", "React Native", "RTK Query", "Redux Toolkit", "Axios", "Clerk"],
-      "depends": ["types", "utils"]
+      "tech": ["Expo", "Expo Router", "React Native", "Axios", "Clerk", "expo-notifications"],
+      "depends": ["types", "tokens"],
+      "subModules": {
+        "auth": "✅ (auth)/ — login + signup (e-posta doğrulama), ClerkProvider, SecureStore token cache",
+        "events": "✅ (app)/index.tsx — FlatList; app/event/[id].tsx — detay + başvur CTA",
+        "applications": "✅ (app)/applications.tsx — başvuru geçmişi, durum badge",
+        "offers": "✅ (app)/offers.tsx — teklif listesi + Teklif Gönder modal",
+        "profile": "✅ (app)/profile.tsx — bilgi kartı, gender/meslek/doğum düzenleme, onboarding banner, çıkış",
+        "pushToken": "✅ src/lib/usePushToken.ts — expo-notifications, PATCH /users/me/push-token",
+        "apiClient": "✅ src/lib/api.ts — axios instance (EXPO_PUBLIC_API_URL), authHeaders()"
+      }
     },
     "web": {
       "path": "apps/web",

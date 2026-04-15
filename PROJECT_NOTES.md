@@ -78,6 +78,40 @@ Platform-agnostic TypeScript sabitleri. Hem mobile hem web consume eder.
 - **Layout** (`src/components/layout/`):
   - `Screen` — SafeAreaView + ScrollView + KeyboardAvoidingView + pull-to-refresh
 
+### [2026-04-15] Expo Mobile Uygulaması Tamamlandı (task-012 → 016)
+
+#### Expo Router + Clerk Auth (task-012)
+- `main: "expo-router/entry"` — file-based routing
+- `app/_layout.tsx`: ClerkProvider + SecureStore token cache + StatusBar
+- `(auth)/index.tsx`: login (email/password), `(auth)/sign-up.tsx`: kayıt + e-posta doğrulama (6 haneli kod)
+- `app/index.tsx`: signed in → `/(app)`, değilse → `/(auth)` yönlendirme
+- `(app)/_layout.tsx`: korumalı Tabs (4 sekme: Etkinlikler, Başvurularım, Tekliflerim, Profil)
+- TypeScript hatası: `View` primitifi `gap/justify/px` prop almıyor → `StyleSheet.create()` ile düzeltildi
+- `StyleProp<ViewStyle>` yerine `ViewStyle` kullanımı Pressable/Button/Card'da hata verdi → import düzeltildi
+
+#### API Client (task-013)
+- `src/lib/api.ts`: axios instance, `EXPO_PUBLIC_API_URL`, `authHeaders()` helper
+- Token her istek öncesinde Clerk'ten alınıyor (`getToken()`)
+
+#### Event List + Detail (task-013)
+- `(app)/index.tsx`: FlatList, cover image, tarih/mekan, pull-to-refresh
+- `app/event/[id].tsx`: detay ekranı, MetaRow bileşeni, "Başvur" CTA footer'da sabit
+- Root Stack'e `event/[id]` eklendi (tabs dışında açılır)
+
+#### Applications Screen + Push Token (task-014)
+- `(app)/applications.tsx`: durum badge'leri (+22 hex opacity trick ile arka plan rengi)
+- `src/lib/usePushToken.ts`: izin alma → `getExpoPushTokenAsync()` → `PATCH /users/me/push-token`; hata sessizce yutulur
+- `expo-notifications` install edildi
+
+#### Offers Screen (task-015)
+- `(app)/offers.tsx`: teklif listesi + admin notu gösterimi
+- Modal (pageSheet): event picker list, tür chip'leri (Bistro/Backstage), not alanı
+
+#### Profile + Onboarding (task-016)
+- `(app)/profile.tsx`: bilgi kartı, gender chip seçimi, meslek/doğum tarihi inputları
+- Onboarding eksik banner (gender + birthDate + occupation kontrolü)
+- Çıkış: `signOut()` ile
+
 ### [2026-04-13] Spec Eklendi — Geliştirmeye Hazır
 - `socialhouse-spec.md` dosyası projeye eklendi (teknik spec v2)
 - STRUCTURE.json, QUICKSTART.md, tasks.json güncellendi
