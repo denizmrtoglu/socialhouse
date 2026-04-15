@@ -3,9 +3,11 @@ import { Tabs, Redirect } from 'expo-router'
 import { useAuth } from '@clerk/clerk-expo'
 import { CalendarDays, ClipboardList, Gift, User } from 'lucide-react-native'
 import { theme } from '../../src/tokens'
+import { usePushToken } from '../../src/lib/usePushToken'
 
 export default function AppLayout() {
   const { isSignedIn, isLoaded } = useAuth()
+  usePushToken()
 
   if (!isLoaded) return null
   if (!isSignedIn) return <Redirect href="/(auth)" />
