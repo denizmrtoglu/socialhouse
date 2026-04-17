@@ -7,7 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native'
-import { useAuth } from '@clerk/clerk-expo'
+import { useAuth } from '@clerk/expo'
 import type { Offer, Event } from '@repo/types'
 import { OfferType, OfferStatus } from '@repo/types'
 import { Screen } from '../../src/components/layout/Screen'

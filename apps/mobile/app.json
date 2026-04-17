@@ -18,7 +18,8 @@
       "bundleIdentifier": "com.digipanda.socialhouse",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
-      }
+      },
+      "appleTeamId": "5MNY79DQ7V"
     },
     "android": {
       "adaptiveIcon": {
@@ -41,6 +42,7 @@
       "expo-router",
       "expo-dev-client",
       "expo-secure-store",
+      ["@clerk/expo", { "appleSignIn": false }],
       "expo-web-browser",
       "expo-build-properties"
     ]

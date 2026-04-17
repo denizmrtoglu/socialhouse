@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { StyleSheet, ActivityIndicator, TouchableOpacity } from 'react-native'
-import { useAuth, useUser } from '@clerk/clerk-expo'
+import { useAuth, useUser } from '@clerk/expo'
 import type { User } from '@repo/types'
 import { Gender } from '@repo/types'
 import { Screen } from '../../src/components/layout/Screen'

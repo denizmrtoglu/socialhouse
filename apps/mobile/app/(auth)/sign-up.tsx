@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet } from 'react-native'
 import { Link } from 'expo-router'
-import { useSignUp } from '@clerk/clerk-expo'
+import { useSignUp } from '@clerk/expo'
 import { Screen } from '../../src/components/layout/Screen'
 import { View } from '../../src/components/primitives/View'
 import { Text } from '../../src/components/primitives/Text'

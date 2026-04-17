@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { FlatList, StyleSheet, ActivityIndicator } from 'react-native'
-import { useAuth } from '@clerk/clerk-expo'
+import { useAuth } from '@clerk/expo'
 import type { Application } from '@repo/types'
 import { ApplicationStatus } from '@repo/types'
 import { Screen } from '../../src/components/layout/Screen'

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import * as Notifications from 'expo-notifications'
 import { Platform } from 'react-native'
-import { useAuth } from '@clerk/clerk-expo'
+import { useAuth } from '@clerk/expo'
 import { apiClient, authHeaders } from './api'
 
 /**

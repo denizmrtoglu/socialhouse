@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Image, ScrollView, StyleSheet, ActivityIndicator } from 'react-native'
 import { useLocalSearchParams, useRouter } from 'expo-router'
-import { useAuth } from '@clerk/clerk-expo'
+import { useAuth } from '@clerk/expo'
 import type { Event } from '@repo/types'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { View } from '../../src/components/primitives/View'

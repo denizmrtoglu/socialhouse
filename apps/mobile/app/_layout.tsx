@@ -1,8 +1,8 @@
 import '../src/i18n'
 import React from 'react'
 import { Stack } from 'expo-router'
-import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo'
-import { tokenCache } from '@clerk/clerk-expo/token-cache'
+import { ClerkProvider, ClerkLoaded } from '@clerk/expo'
+import { tokenCache } from '@clerk/expo/token-cache'
 import { StatusBar } from 'expo-status-bar'
 import { theme } from '../src/tokens'
 

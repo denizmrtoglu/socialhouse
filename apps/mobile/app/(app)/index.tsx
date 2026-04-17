@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { FlatList, StyleSheet, Image, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
-import { useAuth } from '@clerk/clerk-expo'
+import { useAuth } from '@clerk/expo'
 import type { Event } from '@repo/types'
 import { Screen } from '../../src/components/layout/Screen'
 import { View } from '../../src/components/primitives/View'
